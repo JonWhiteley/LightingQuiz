@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--True False View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="True False View Controller" customClass="TFViewController" customModule="LightingQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5iO-0W-CeR" userLabel="Main Stack View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQy-0K-z0U">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="280.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WkL-Ho-km3">
+                                        <rect key="frame" x="0.0" y="285.5" width="414" height="281"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Fl-nC-0dd" userLabel="True False Stack View">
+                                        <rect key="frame" x="0.0" y="571.5" width="414" height="280.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xh-GS-bB7">
+                                                <rect key="frame" x="0.0" y="0.0" width="204.5" height="280.5"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="True">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="answerChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HzH-Cu-gB1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqV-nG-a4U">
+                                                <rect key="frame" x="209.5" y="0.0" width="204.5" height="280.5"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                <state key="normal" title="False">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="answerChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEu-Si-bSi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5iO-0W-CeR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AqR-22-CgJ"/>
+                            <constraint firstItem="5iO-0W-CeR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GrJ-l4-e0u"/>
+                            <constraint firstAttribute="trailing" secondItem="5iO-0W-CeR" secondAttribute="trailing" id="tp3-pd-DMi"/>
+                            <constraint firstAttribute="bottom" secondItem="5iO-0W-CeR" secondAttribute="bottom" id="vmw-eW-VmY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="falseButton" destination="CqV-nG-a4U" id="2sB-wl-MSY"/>
+                        <outlet property="questionImage" destination="WkL-Ho-km3" id="vfT-HG-Bt6"/>
+                        <outlet property="questionLabel" destination="PQy-0K-z0U" id="7Yr-ln-YVG"/>
+                        <outlet property="trueButton" destination="5Xh-GS-bB7" id="ril-aZ-A3G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Multi View Controller-->
+        <scene sceneID="GSN-5j-ls0">
+            <objects>
+                <viewController id="LOb-kd-7cn" customClass="MultiViewController" customModule="LightingQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BVc-rX-lpd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dh1-6W-NZT" userLabel="Main Stack View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWl-Wv-fDj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="280.5"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZR3-iv-gbV">
+                                        <rect key="frame" x="0.0" y="285.5" width="414" height="281"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eqt-V3-w3X" userLabel="Answer Stack View">
+                                        <rect key="frame" x="0.0" y="571.5" width="414" height="280.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OQG-fu-yvX">
+                                                <rect key="frame" x="0.0" y="0.0" width="204.5" height="280.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03E-sI-wmW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="137.5"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Answer 1">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerChoice:" destination="LOb-kd-7cn" eventType="touchUpInside" id="xE4-Rn-8Ug"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wup-K1-5uK">
+                                                        <rect key="frame" x="0.0" y="142.5" width="204.5" height="138"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Answer 3">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerChoice:" destination="LOb-kd-7cn" eventType="touchUpInside" id="enx-MH-QqR"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ixW-AV-fSK">
+                                                <rect key="frame" x="209.5" y="0.0" width="204.5" height="280.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2a-XB-KwK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="204.5" height="137.5"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Answer 2">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerChoice:" destination="LOb-kd-7cn" eventType="touchUpInside" id="CFc-0i-tmy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lto-WQ-rFV">
+                                                        <rect key="frame" x="0.0" y="142.5" width="204.5" height="138"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Answer 4">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerChoice:" destination="LOb-kd-7cn" eventType="touchUpInside" id="KBn-Yw-sZH"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dh1-6W-NZT" firstAttribute="leading" secondItem="BVc-rX-lpd" secondAttribute="leading" id="3j2-wW-gan"/>
+                            <constraint firstItem="dh1-6W-NZT" firstAttribute="top" secondItem="lWk-GQ-mNM" secondAttribute="top" id="DwT-Zw-1mK"/>
+                            <constraint firstAttribute="trailing" secondItem="dh1-6W-NZT" secondAttribute="trailing" id="RXo-Im-rL3"/>
+                            <constraint firstAttribute="bottom" secondItem="dh1-6W-NZT" secondAttribute="bottom" id="TMM-2R-OoT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lWk-GQ-mNM"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerFour" destination="Lto-WQ-rFV" id="C0D-zN-0pw"/>
+                        <outlet property="answerOne" destination="03E-sI-wmW" id="NpH-R4-Hz8"/>
+                        <outlet property="answerThree" destination="Wup-K1-5uK" id="cC1-Mr-fQG"/>
+                        <outlet property="answerTwo" destination="i2a-XB-KwK" id="Blh-if-zfO"/>
+                        <outlet property="questionImage" destination="ZR3-iv-gbV" id="Ju8-hc-XqI"/>
+                        <outlet property="questionLabel" destination="aWl-Wv-fDj" id="9sQ-GX-A8s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3M-mP-195" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="138"/>
+        </scene>
+    </scenes>
+</document>
